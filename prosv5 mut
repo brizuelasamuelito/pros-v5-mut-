@@ -1,0 +1,58 @@
+Traceback (most recent call last):
+  File "/usr/local/bin/prosv5", line 11, in <module>
+    load_entry_point('pros-cli-v5==3.1.4', 'console_scripts', 'prosv5')()
+  File "/usr/local/Cellar/pros-cli/HEAD-03b467a/libexec/lib/python3.7/site-packages/pkg_resources/__init__.py", line 489, in load_entry_point
+    return get_distribution(dist).load_entry_point(group, name)
+  File "/usr/local/Cellar/pros-cli/HEAD-03b467a/libexec/lib/python3.7/site-packages/pkg_resources/__init__.py", line 2852, in load_entry_point
+    return ep.load()
+  File "/usr/local/Cellar/pros-cli/HEAD-03b467a/libexec/lib/python3.7/site-packages/pkg_resources/__init__.py", line 2443, in load
+    return self.resolve()
+  File "/usr/local/Cellar/pros-cli/HEAD-03b467a/libexec/lib/python3.7/site-packages/pkg_resources/__init__.py", line 2449, in resolve
+    module = __import__(self.module_name, fromlist=['__name__'], level=0)
+  File "/usr/local/Cellar/pros-cli/HEAD-03b467a/libexec/lib/python3.7/site-packages/pros/cli/main.py", line 36, in <module>
+    __import__(f'pros.cli.{root_source}')
+  File "/usr/local/Cellar/pros-cli/HEAD-03b467a/libexec/lib/python3.7/site-packages/pros/cli/conductor.py", line 178, in <module>
+    @click.argument('target', default=c.Conductor().default_target, type=click.Choice(['v5', 'cortex']))
+  File "/usr/local/Cellar/pros-cli/HEAD-03b467a/libexec/lib/python3.7/site-packages/pros/conductor/conductor.py", line 33, in __init__
+    super(Conductor, self).__init__(file)
+  File "/usr/local/Cellar/pros-cli/HEAD-03b467a/libexec/lib/python3.7/site-packages/pros/config/config.py", line 30, in __init__
+    result = jsonpickle.decode(f.read())
+  File "/usr/local/Cellar/pros-cli/HEAD-03b467a/libexec/lib/python3.7/site-packages/jsonpickle/__init__.py", line 155, in decode
+    return unpickler.decode(string, backend=backend, keys=keys, classes=classes)
+  File "/usr/local/Cellar/pros-cli/HEAD-03b467a/libexec/lib/python3.7/site-packages/jsonpickle/unpickler.py", line 26, in decode
+    return context.restore(backend.decode(string), reset=reset, classes=classes)
+  File "/usr/local/Cellar/pros-cli/HEAD-03b467a/libexec/lib/python3.7/site-packages/jsonpickle/unpickler.py", line 138, in restore
+    value = self._restore(obj)
+  File "/usr/local/Cellar/pros-cli/HEAD-03b467a/libexec/lib/python3.7/site-packages/jsonpickle/unpickler.py", line 192, in _restore
+    return restore(obj)
+  File "/usr/local/Cellar/pros-cli/HEAD-03b467a/libexec/lib/python3.7/site-packages/jsonpickle/unpickler.py", line 304, in _restore_object
+    return self._restore_object_instance(obj, cls)
+  File "/usr/local/Cellar/pros-cli/HEAD-03b467a/libexec/lib/python3.7/site-packages/jsonpickle/unpickler.py", line 369, in _restore_object_instance
+    return self._restore_object_instance_variables(obj, instance)
+  File "/usr/local/Cellar/pros-cli/HEAD-03b467a/libexec/lib/python3.7/site-packages/jsonpickle/unpickler.py", line 431, in _restore_object_instance_variables
+    instance = self._restore_state(obj, instance)
+  File "/usr/local/Cellar/pros-cli/HEAD-03b467a/libexec/lib/python3.7/site-packages/jsonpickle/unpickler.py", line 436, in _restore_state
+    state = self._restore(obj[tags.STATE])
+  File "/usr/local/Cellar/pros-cli/HEAD-03b467a/libexec/lib/python3.7/site-packages/jsonpickle/unpickler.py", line 192, in _restore
+    return restore(obj)
+  File "/usr/local/Cellar/pros-cli/HEAD-03b467a/libexec/lib/python3.7/site-packages/jsonpickle/unpickler.py", line 491, in _restore_dict
+    data[k] = self._restore(v)
+  File "/usr/local/Cellar/pros-cli/HEAD-03b467a/libexec/lib/python3.7/site-packages/jsonpickle/unpickler.py", line 192, in _restore
+    return restore(obj)
+  File "/usr/local/Cellar/pros-cli/HEAD-03b467a/libexec/lib/python3.7/site-packages/jsonpickle/unpickler.py", line 491, in _restore_dict
+    data[k] = self._restore(v)
+  File "/usr/local/Cellar/pros-cli/HEAD-03b467a/libexec/lib/python3.7/site-packages/jsonpickle/unpickler.py", line 192, in _restore
+    return restore(obj)
+  File "/usr/local/Cellar/pros-cli/HEAD-03b467a/libexec/lib/python3.7/site-packages/jsonpickle/unpickler.py", line 304, in _restore_object
+    return self._restore_object_instance(obj, cls)
+  File "/usr/local/Cellar/pros-cli/HEAD-03b467a/libexec/lib/python3.7/site-packages/jsonpickle/unpickler.py", line 369, in _restore_object_instance
+    return self._restore_object_instance_variables(obj, instance)
+  File "/usr/local/Cellar/pros-cli/HEAD-03b467a/libexec/lib/python3.7/site-packages/jsonpickle/unpickler.py", line 419, in _restore_object_instance_variables
+    instance = self._restore_from_dict(obj, instance)
+  File "/usr/local/Cellar/pros-cli/HEAD-03b467a/libexec/lib/python3.7/site-packages/jsonpickle/unpickler.py", line 387, in _restore_from_dict
+    value = self._restore(v)
+  File "/usr/local/Cellar/pros-cli/HEAD-03b467a/libexec/lib/python3.7/site-packages/jsonpickle/unpickler.py", line 192, in _restore
+    return restore(obj)
+  File "/usr/local/Cellar/pros-cli/HEAD-03b467a/libexec/lib/python3.7/site-packages/jsonpickle/unpickler.py", line 213, in _restore_reduce
+    reduce_tuple = f, args, state, listitems, dictitems = map(self._restore, reduce_val)
+ValueError: not enough values to unpack (expected 5, got 2)
